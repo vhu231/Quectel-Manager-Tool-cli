@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-用于管理 Quectel（移远）蜂窝模组：只读查看 ModemManager 状态、通过 AT 口下发命令、以及短信相关操作。
+终端工具，用于管理 Quectel（移远）蜂窝模组：只读查看 ModemManager 状态、通过 AT 口下发命令、以及短信相关操作。
 
 ---
 
@@ -14,7 +14,6 @@
 - 内置 AT / QCFG / QSIMCFG 目录与手册注释
 - 日常快捷项（IMS/VoLTE、usbnet、重启等）
 - 短信列表 / 发送 / 删除
-- 中英切换（本会话有效，不落盘）
 - 沉浸式 CLI（清屏 + 顶栏状态）
 
 默认**不落盘用户数据**；仅在启动时加 `--log` 才会保存日志。
@@ -60,21 +59,21 @@ chmod +x run.sh
   --log [PATH]   将日志持久化到 PATH。
                  省略 PATH 时：脚本同目录 ./quick-at.log。
                  不加 --log：日志只写在临时目录，退出后删除。
-  --lang LANG    zh|en（仅本会话，不保存）
+  --lang LANG    本会话界面语言（不保存）
   -h, --help     显示帮助
 ```
 
 示例：
 
 ```bash
-./run.sh --lang zh
+./run.sh
 ./run.sh --log
-./run.sh --log /tmp/quectel-at.log --lang en
+./run.sh --log /tmp/quectel-at.log
 ```
 
 环境变量：
 
-- `QUICK_AT_LANG=zh|en` — 本会话界面语言
+- `QUICK_AT_LANG` — 本会话界面语言
 - `QUICK_AT_LOG_MAX` — 日志轮转大小（字节，默认 `1048576`）
 
 ---

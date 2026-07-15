@@ -2,7 +2,7 @@
 
 [中文文档](README_ZH.md)
 
-Quectel cellular modules: read-only ModemManager status, AT commands over the serial AT port, and SMS helpers.
+Terminal CLI for Quectel cellular modules: read-only ModemManager status, AT commands over the serial AT port, and SMS helpers.
 
 ---
 
@@ -14,7 +14,6 @@ Quectel cellular modules: read-only ModemManager status, AT commands over the se
 - Built-in AT / QCFG / QSIMCFG catalog with manual notes
 - Daily quick presets (IMS/VoLTE, usbnet, reboot, …)
 - SMS list / send / delete
-- zh/en toggle (session only, not persisted)
 - Immersive CLI (clear screen + sticky header)
 
 By default **no user data is written to disk**; pass `--log` only if you want persistent logs.
@@ -62,21 +61,21 @@ chmod +x run.sh
   --log [PATH]   Persist log to PATH.
                  If PATH omitted: ./quick-at.log next to the script.
                  Without --log: log only in a temp dir (deleted on exit).
-  --lang LANG    zh|en (session only, not saved)
+  --lang LANG    UI language for this session (not saved)
   -h, --help     Show help
 ```
 
 Examples:
 
 ```bash
-./run.sh --lang en
+./run.sh
 ./run.sh --log
-./run.sh --log /tmp/quectel-at.log --lang zh
+./run.sh --log /tmp/quectel-at.log
 ```
 
 Environment:
 
-- `QUICK_AT_LANG=zh|en` — session UI language
+- `QUICK_AT_LANG` — session UI language
 - `QUICK_AT_LOG_MAX` — log rotate size in bytes (default `1048576`)
 
 ---
