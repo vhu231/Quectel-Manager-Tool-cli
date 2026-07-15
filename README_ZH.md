@@ -147,7 +147,7 @@ python3 regroup_catalog.py
 
 ## 许可与手册版权
 
-脚本代码以仓库内声明为准（若未单独声明，请自行补充 `LICENSE`）。
+本项目的脚本与文档采用 [MIT License](LICENSE)。
 
 Quectel PDF 手册版权归 **Quectel Wireless Solutions** 所有；收录仅便于对照 AT 注释，使用时请遵守厂商条款。
 

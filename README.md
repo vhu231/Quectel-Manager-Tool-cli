@@ -149,7 +149,7 @@ This updates `AT_COMMANDS_ZH.md` / `AT_COMMANDS_EN.md`.
 
 ## License & manuals
 
-Add a `LICENSE` if you redistribute the scripts.
+This project’s scripts and docs are released under the [MIT License](LICENSE).
 
 Quectel PDF manuals are copyright **Quectel Wireless Solutions**; included for AT annotation reference only. Follow the vendor terms when using them.
 
